@@ -114,7 +114,7 @@
                                                     <!-- Meal Intake menu end -->
                                                     
                                                     <!-- Booking menu start -->
-                                                    <li <?php setActive("bookings"); ?>><a href="<?php echo base_url(); ?>bookings">BOOKINGS</a></li>
+                                                    <li <?php setActive("myappointment"); ?>><a href="<?php echo base_url(); ?>myappointment">MY APPOINTMENTS</a></li>
                                                     <!-- Booking menu end -->
                                                 </ul>
                                             </div>

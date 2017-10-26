@@ -1,5 +1,5 @@
 <?php
-class Bookings extends CI_Controller{
+class MyAppointment extends CI_Controller{
     public function view() {
         //sessions are handled quite crudely. Should be handled in a centralized controller. My bad -Jerome
         $NRIC = $this->session->IC; //get the session NRIC
@@ -10,7 +10,7 @@ class Bookings extends CI_Controller{
         $data = $this->getUserData($NRIC);
                 
         $this->load->view('templates/main/mainHeader');
-        $this->load->view('pages/bookings', $data);
+        $this->load->view('pages/myappointment', $data);
         $this->load->view('templates/login/footer');
     }
 
