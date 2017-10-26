@@ -24,6 +24,7 @@ function getrole($role_id){
             <li class="active">My Account</li>
             <!--User Name-->
 <!--            <li class="pull-right">Welcome <a href='profile.php'><?php echo $_SESSION['username'];?></a></li>-->
+            <li class="pull-right"><?php echo "Welcome <a href='profile.php'>"; echo $user['fName'] ?></a></li>
             <li class="pull-right">Welcome <a href="<?php echo base_url();?>profile">Username</a></li>
         </ol>
     </div>

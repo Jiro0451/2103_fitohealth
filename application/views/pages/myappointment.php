@@ -4,7 +4,7 @@
     <div class="container">
         <ol class="breadcrumb">
             <li class="active"><i class="fa fa-check-square-o"></i> My Appointments</li>
-            <li class="pull-right"><?php /*echo "Welcome <a href='profile.php'>"; echo $_SESSION['username'];*/?> </a></li>
+            <li class="pull-right"><?php echo "Welcome <a href='profile.php'>"; echo $user['fName'] ?></a></li>
         </ol>
     </div>
 </div>
