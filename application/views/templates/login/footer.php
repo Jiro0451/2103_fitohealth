@@ -44,21 +44,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- Modernizr javascript -->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/modernizr.js"></script>
+<script type="text/javascript" src="assets/plugins/modernizr.js"></script>
 
 <!-- SmoothScroll javascript -->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/jquery.browser.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/SmoothScroll.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery.browser.js"></script>
+<script type="text/javascript" src="assets/plugins/SmoothScroll.js"></script>
 
 <!-- Initialization of Plugins -->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/template.js"></script>
+<script type="text/javascript" src="assets/js/template.js"></script>
 
 <!-- Custom Scripts -->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/custom.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
 
-<script src="<?php echo base_url(); ?>assets/css/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+<script src="assets/css/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 
-<script src="<?php echo base_url(); ?>assets/css/jQuery-Timepicker-Addon-master/src/jquery-ui-timepicker-addon.js"></script>
+<script src="assets/css/jQuery-Timepicker-Addon-master/src/jquery-ui-timepicker-addon.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
 <script src="../metisMenu/dist/metisMenu.min.js"></script>
@@ -77,11 +77,11 @@
 <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/src/js/bootstrap-datetimepicker.js"></script>
 
 <!-- ============ CHART============ -->
-<script src="<?php echo base_url(); ?>assets/plugins/charts/chart.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/plugins/charts/Chart.bundle.js" type="text/javascript"></script>
+<script src="assets/plugins/charts/chart.js" type="text/javascript"></script>
+<script src="assets/plugins/charts/Chart.bundle.js" type="text/javascript"></script>
 
 <!-- Own Script -->
-<script src="<?php echo base_url(); ?>assets/js/ownJS.js" type="text/javascript"></script>
+<script src="assets/js/ownJS.js" type="text/javascript"></script>
 
 <!----------------------- Scripts -------------------------->
 <script>
