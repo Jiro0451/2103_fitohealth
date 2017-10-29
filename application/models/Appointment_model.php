@@ -16,13 +16,13 @@
                 $query ="SELECT * FROM doctor_has_institution WHERE institutionid = '" .$place. "'";
                 $results = $this->db->query($query);
                 $resultArray = $results->result_array();
-            
-                //<option value="defDoctor">Select Doctor</option>
-      
+            ?>
+                    <option value="defDoctor">Select Doctor</option>
+            <?php
                     foreach($resultArray as $doctor) {
-  
-                    //<option value="<?php echo $doctor["doctorid"];" echo $doctor["doctorname"];</option>
-           
+            ?>
+                    <option value="<?php echo $doctor["doctorid"]; ?>"><?php echo $doctor["doctorname"]; ?></option>
+            <?php
                     }
             }else{
                 echo "<option value='defDoctor'>Select Doctor</option>";

@@ -15,10 +15,10 @@
                 'height' => $this->input->post('inputHeight'),
                 'weight' => $this->input->post('inputWeight'),
 //                'h_condition' => $this->input->post('inputCondition'),
-                'health_condition' => $this->input->post('inputWeight')
+                'h_condition' => $this->input->post('inputCondition')
             );
 
-            $query = "INSERT INTO user(NRIC, password, fName, lName, email, address, height, weight, h_condition)"
+            $query = "INSERT INTO users(NRIC, password, fName, lName, email, address, height, weight, h_condition)"
                     ." VALUES ('"
                     .$data['NRIC']."', '"
                     .$data['password']."', '"
@@ -38,7 +38,7 @@
         }
         
         public function getUser($NRIC) {
-            $query = "SELECT * FROM user WHERE NRIC = '".$NRIC."'";
+            $query = "SELECT * FROM users WHERE NRIC = '".$NRIC."'";
             $result = $this->db->query($query); 
             return $result->row_array();
             
@@ -57,7 +57,7 @@
             );
             
             $NRIC = $this->input->post('NRIC');
-            $query = "UPDATE user SET "
+            $query = "UPDATE users SET "
                     ."fName = '".$data['fName']."', "
                     ."lName = '".$data['lName']."', "
                     ."email = '".$data['email']."', "
@@ -74,7 +74,7 @@
         
         //gets height -Jerome
         public function getHeight($NRIC) {
-            $query = "SELECT height FROM user WHERE NRIC = '".$NRIC."'";
+            $query = "SELECT height FROM users WHERE NRIC = '".$NRIC."'";
             $result = $this->db->query($query);
             
             return $result->row()->height;
@@ -84,7 +84,7 @@
             $data = array('height' => $this->input->post('newHeight'));
             
             $NRIC = $this->input->post('NRIC');
-            $query = "UPDATE user SET "
+            $query = "UPDATE users SET "
                 ."height = ".$data['height']/100    //User's are asked to give height in cm. - Jerome
                 ." WHERE NRIC = '".$NRIC."'";
                         
@@ -97,7 +97,7 @@
         
         //gets weight -Jerome
         public function getWeight($NRIC) {
-            $query = "SELECT weight FROM user WHERE NRIC = '".$NRIC."'";
+            $query = "SELECT weight FROM users WHERE NRIC = '".$NRIC."'";
             $result = $this->db->query($query);
             
             return $result->row()->weight;
@@ -107,7 +107,7 @@
             $data = array('weight' => $this->input->post('newWeight'));
                         
             $NRIC = $this->input->post('NRIC');
-            $query = "UPDATE user SET "
+            $query = "UPDATE users SET "
                 ."weight = ".$data['weight']
                 ." WHERE NRIC = '".$NRIC."'";
                         
@@ -124,8 +124,8 @@
             $enc_password = md5($data['password']);
             
             $NRIC = $this->input->post('NRIC');
-            $query = "UPDATE user SET "
-                ."password = '".$data['password']
+            $query = "UPDATE users SET "
+                ."password = '".$enc_password
                 ."' WHERE NRIC = '".$NRIC."'";
                         
             return $this->db->query($query);
@@ -138,7 +138,7 @@
         //Login Verification -Jerome
         public function verification($NRIC, $Password) {
             if ($this->user_exists_on_database($NRIC)) {
-                $query = "SELECT 1 FROM user "
+                $query = "SELECT 1 FROM users "
                         ."WHERE NRIC = '$NRIC' "
                         ."AND password = '$Password'";
                 
@@ -152,7 +152,7 @@
         
         //Checks if NRIC exists on database. -Jerome
         public function user_exists_on_database($NRIC) {
-            $query = "SELECT 1 FROM user WHERE NRIC = '$NRIC'";
+            $query = "SELECT 1 FROM users WHERE NRIC = '$NRIC'";
             $data = $this->db->query($query);
             
             return $data->result();
