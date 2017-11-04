@@ -41,7 +41,6 @@
         <link href="assets/css/custom.css" rel="stylesheet">
         <link href="assets/css/ownBootstrapCSS.css" rel="stylesheet" >
         
-        <!--?php include('custom.php'); ?-->
         
     </head>
     
